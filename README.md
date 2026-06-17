@@ -87,6 +87,32 @@ pip install -r requirements.txt
 
 ---
 
+## Setup
+
+### Pré-requisitos
+- Python 3.10+
+
+### Configuração do ambiente local
+
+```bash
+python -m venv .venv
+
+# Windows
+.venv\Scripts\activate
+
+# Linux / macOS
+source .venv/bin/activate
+
+pip install -U pip
+pip install -r requirements.txt
+```
+
+> **Nota:** o treinamento do modelo roda no Google Colab.
+> O ambiente local serve para coleta e processamento de dados (CPU é suficiente).
+> Instalar CUDA localmente é opcional.
+
+---
+
 ## Modelo base
 
 O fine-tuning usa LoRA (Low-Rank Adaptation), o que permite treinar em hardware modesto sem alterar o modelo base.
