@@ -7,8 +7,9 @@ __pycache__/
 *.py[cod]
 *.egg-info/
 
-# Dados baixados (PGNs, puzzles, artigos)
-data/raw/
+# Dados baixados (PGNs, puzzles, artigos) — mantém a pasta, ignora o conteúdo
+data/raw/*
+!data/raw/.gitkeep
 
 # Configurações locais de IDE
 .vscode/
