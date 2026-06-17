@@ -1,0 +1,22 @@
+# Aprendizado de máquina e fine-tuning
+torch
+transformers
+peft
+trl
+datasets
+accelerate
+
+# Quantização para treino eficiente (usado no Colab com GPU)
+bitsandbytes
+
+# Xadrez
+python-chess
+
+# Comunicação com APIs e Ollama
+requests
+
+# Leitura de dumps comprimidos do Lichess (.zst)
+zstandard
+
+# Armazenamento de dados em formato Parquet
+pyarrow
