@@ -1,0 +1,13 @@
+import json
+import os
+
+class PuzzleRepository:
+
+    def __init__(self, path: str):
+        self.path = path
+
+    def save(self, puzzles: list[dict]) -> None:
+        os.makedirs(os.path.dirname(self.path), exist_ok=True)
+        with open(self.path, "w", encoding="utf-8") as file:
+            json.dump(puzzles, file, ensure_ascii=False, indent=2)
+            
