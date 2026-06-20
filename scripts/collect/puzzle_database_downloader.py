@@ -10,10 +10,11 @@ class PuzzleDatabaseDownloader:
 
     
     def streams_rows(self):
-        request = requests.get(self.url, stream=True)
-        descompress = zstandard.ZstdDecompressor().stream_reader(request.raw)
-        text = io.TextIOWrapper(descompress, encoding='utf-8')
-        dict_reader = csv.DictReader(text)
-        yield from dict_reader
+        with requests.get(self.url, stream=True) as response:
+            response.raise_for_status()
+            descompress = zstandard.ZstdDecompressor().stream_reader(response.raw)
+            text = io.TextIOWrapper(descompress, encoding='utf-8')
+            dict_reader = csv.DictReader(text)
+            yield from dict_reader
 
         
