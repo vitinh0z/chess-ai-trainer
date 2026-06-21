@@ -5,7 +5,7 @@ class DatasetFormatter:
 
     SYSTEM_PROMPT = "Você é um treinador de xadrez experiente que explica conceitos em português brasileiro de forma didática."
 
-    def __init__(self, explanation_generator: 'ExplanationGenerator'):
+    def __init__(self, explanation_generator: ExplanationGenerator):
         self.explanation_generator = explanation_generator
 
 
