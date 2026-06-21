@@ -15,7 +15,10 @@ class ExplanationGenerator:
     }
 
     def generate_explanation(self, puzzle: dict) -> str:
-        fist_puzzle = puzzle["themes"][0]
-        explain_theme = self.TEMPLATES[fist_puzzle]
-        best_solution = puzzle["solution"][0]
+        themes = puzzle.get("themes", [])
+        best_solution = puzzle.get("solution", [None])[0]
+        first_supported_theme = next((t for t in themes if t in self.TEMPLATES), None)
+        if not first_supported_theme or not best_solution:
+            return "Não foi possível gerar uma explicação para este puzzle."
+        explain_theme = self.TEMPLATES[first_supported_theme]
         return f"O melhor lance é {best_solution}. {explain_theme}"
