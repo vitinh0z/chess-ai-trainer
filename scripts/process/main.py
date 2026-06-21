@@ -1,8 +1,8 @@
 import json
 
-from scripts.collect.explanation_generator import ExplanationGenerator
-from scripts.collect.dataset_formatter import DatasetFormatter
-from scripts.collect.dataset_repository import DatasetRepository
+from scripts.process.explanation_generator import ExplanationGenerator
+from scripts.process.dataset_formatter import DatasetFormatter
+from scripts.process.dataset_repository import DatasetRepository
 
 
 def main():
