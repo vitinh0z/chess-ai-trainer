@@ -11,6 +11,10 @@ __pycache__/
 data/raw/*
 !data/raw/.gitkeep
 
+# Datasets gerados pelo pipeline de processamento — mantém a pasta, ignora o conteúdo
+data/processed/*
+!data/processed/.gitkeep
+
 # Configurações locais de IDE
 .vscode/
 .idea/
