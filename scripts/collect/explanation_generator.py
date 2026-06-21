@@ -14,7 +14,7 @@ class ExplanationGenerator:
         "Ao capturar ou forçar o movimento da peça da frente, a peça mais valiosa atrás também fica exposta ao ataque.",
     }
 
-    def generate_explanation (self, puzzle: dict) -> str:
+    def generate_explanation(self, puzzle: dict) -> str:
         fist_puzzle = puzzle["themes"][0]
         explain_theme = self.TEMPLATES[fist_puzzle]
         best_solution = puzzle["solution"][0]
