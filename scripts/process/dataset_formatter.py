@@ -1,5 +1,5 @@
 
-from scripts.collect.explanation_generator import ExplanationGenerator
+from scripts.process.explanation_generator import ExplanationGenerator
 
 class DatasetFormatter:
 
